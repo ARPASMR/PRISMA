@@ -1,0 +1,15 @@
+#--Directory operative prisma
+BASE=/prisma
+TMP_DIR=$BASE/tmp
+SCARICO_DIR=$BASE/geotiff
+RADARDIR_CUM=$BASE/cumulata
+SERVER1="meteo@10.10.0.13"
+SERVER_EXT="meteoweb@172.16.1.10"
+RADAR_SERVER=/srv/www/prodottimeteo/radar/precipitazione_ora
+RADAR_SERVER_EXT=/var/www/meteo/ghost/radar/prisma_ora
+
+#--Variabili prisma
+host=ftp.arpalombardia.it
+usr=radar
+pwr=radch!
+node="-u radar -p radch! ftp.arpalombardia.it"
