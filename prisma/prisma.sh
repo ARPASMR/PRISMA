@@ -165,7 +165,11 @@ MAX_RETRIES=10
 i=0
 RC=1
 
-scp $RADARDIR_CUM/$nomefile_cumulata $SERVER1:/home/meteo/programmi/radar/prisma_ora/dati
+# scp $RADARDIR_CUM/$nomefile_cumulata $SERVER1:/home/meteo/programmi/radar/prisma_ora/dati
+
+source /prisma/s3put.sh
+putS3 $RADARDIR_CUM $nomefile_cumulata prova test
+
 # marta: inserisco chiamata syslogger
 ##if [[ "$?" != "0" ]]; then
 ##  logger -i -s -p user.err "prisma.sh@libertario: fallita copia bf radar su mediano" -t "PREVISORE"
